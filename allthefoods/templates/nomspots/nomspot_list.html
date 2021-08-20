@@ -7,7 +7,8 @@
 
 <ul>
   {% for nomspot in nomspot_list %}
-    <li><a href="#TODO">{{ nomspot.name }}</a></li>
+    <li><a href="{% url 'nomspots:detail' nomspot.slug %}">
+    </li>
   {% endfor %}
 </ul>
 {% endblock content %}

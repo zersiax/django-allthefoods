@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Nomspots: {{ nomspot.name }}{% endblock title %}
+
+{% block content %}
+
+<h2>{{ nomspot.name }}</h2>
+
+{% if nomspot.goodness %}
+    <p>This nomspot is: {{ nomspot.get_goodness_display }}</p>
+{% endif %}
+
+{% if nomspot.description %}
+    <p>{{ nomspot.description }}</p>
+{% endif %}
+
+{% endblock content %}
