@@ -1,3 +1,4 @@
+from allthefoods import nomspots
 from django.conf import settings
 from django.urls import include, path
 from django.conf.urls.static import static
@@ -24,7 +25,11 @@ urlpatterns = [
         include("allthefoods.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
-    # Your stuff: custom urls includes go here
+path(
+    'nomspots/',
+    include('allthefoods.nomspots.urls',
+    namespace='nomspos')
+)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

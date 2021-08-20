@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Nomspot List{% endblock title %}
+
+{% block content %}
+  <h2>Nomspot List</h2>
+
+<ul>
+  {% for nomspot in nomspot_list %}
+    <li><a href="#TODO">{{ nomspot.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock content %}
+
